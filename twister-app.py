@@ -9,6 +9,8 @@ BG_COLOUR = "#ffffff"
 
 # function to load frame1
 def load_frame1():
+    # raise frame1 on top
+    frame1.tkraise()
     
     # prevent child form modifying parent
     frame1.pack_propagate(False)
@@ -48,6 +50,8 @@ def load_frame1():
 
 # function to load frame2
 def load_frame2():
+    # raise frame2 on top
+    frame2.tkraise()
     print(get_random_position())
     
     
