@@ -41,7 +41,22 @@ tk.Label(
     bg=BG_COLOUR,
     fg="black",
     font=("TkHeadingFont", 24)
-    ).pack()
+).pack()
+
+
+# create button widget
+tk.Button(
+    frame1,
+    text="SPIN THE WHEEL",
+    font=("TkDefaultFont", 24),
+    bg="#888888",
+    fg="white",
+    cursor="hand2",
+    activebackground="#123456",
+    activeforeground="red",
+    command=""
+).pack()
+    
     
 
 
