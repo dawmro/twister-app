@@ -17,13 +17,14 @@ frame1 = tk.Frame(root, width=400, height=400, bg="#ffffff")
 frame1.grid(row=0, column=0)
 
 # load image for main screen
-main_screen_img = ImageTk.PhotoImage("file=assets/main_screen.png")
+main_screen_img = ImageTk.PhotoImage(file="assets/main_screen.png")
 
 # convert image to widget for frame1
-main_screen_widget = tk.Label1(frame1, image=main_screen_img)
+main_screen_widget = tk.Label(frame1, image=main_screen_img)
 main_screen_widget.image = main_screen_img
 
-
+# pack widget to place it in frame
+main_screen_widget.pack()
 
 # run app
 root.mainloop()
