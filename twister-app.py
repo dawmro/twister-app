@@ -7,6 +7,7 @@ from random import randrange
 BG_COLOUR = "#ffffff"
 
 
+
 # function to load frame1
 def load_frame1():
     # raise frame1 on top
@@ -16,7 +17,7 @@ def load_frame1():
     frame1.pack_propagate(False)
     
     # load image for main screen
-    main_screen_img = ImageTk.PhotoImage(file="assets/main_screen.png")
+    main_screen_img = ImageTk.PhotoImage(file="assets/main_screen/main_screen.png")
 
     # convert image to widget for frame1
     main_screen_widget = tk.Label(frame1, image=main_screen_img, bg=BG_COLOUR)
