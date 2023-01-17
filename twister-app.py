@@ -1,6 +1,9 @@
 import tkinter as tk
 from PIL import ImageTk
 
+
+BG_COLOUR = "#ffffff"
+
 # initiallize app
 root = tk.Tk()
 
@@ -11,7 +14,7 @@ root.title("Twister App")
 root.eval("tk::PlaceWindow . center")
 
 # create first frame
-frame1 = tk.Frame(root, width=506, height=600, bg="#ffffff")
+frame1 = tk.Frame(root, width=506, height=600, bg=BG_COLOUR)
 
 # place frame on the page
 frame1.grid(row=0, column=0)
@@ -24,7 +27,7 @@ frame1.pack_propagate(False)
 main_screen_img = ImageTk.PhotoImage(file="assets/main_screen.png")
 
 # convert image to widget for frame1
-main_screen_widget = tk.Label(frame1, image=main_screen_img)
+main_screen_widget = tk.Label(frame1, image=main_screen_img, bg=BG_COLOUR)
 main_screen_widget.image = main_screen_img
 
 # pack widget to place it in frame
