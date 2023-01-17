@@ -33,5 +33,17 @@ main_screen_widget.image = main_screen_img
 # pack widget to place it in frame
 main_screen_widget.pack()
 
+
+# create widget with text for frame1
+tk.Label(
+    frame1,
+    text="take it for a spin",
+    bg=BG_COLOUR,
+    fg="black",
+    font=("TkHeadingFont", 24)
+    ).pack()
+    
+
+
 # run app
 root.mainloop()
