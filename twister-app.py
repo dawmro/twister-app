@@ -2,9 +2,16 @@ import tkinter as tk
 from PIL import ImageTk
 import random
 from random import randrange
+import pathlib
 
 
 BG_COLOUR = "#ffffff"
+
+# results images location
+RESULTS_IMAGES_DIR = 'assets/spin_results'
+
+# load all result image files
+RESULTS_FILES = [item for item in pathlib.Path(RESULTS_IMAGES_DIR).rglob('*.png') if item.is_file()]
 
 
 
@@ -76,6 +83,8 @@ def get_random_position():
         16 : "left hand blue",
     }
     return positions[randrange(1, len(positions), 1)]
+
+
 
 
 # initiallize app
