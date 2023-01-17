@@ -11,7 +11,7 @@ root.title("Twister App")
 root.eval("tk::PlaceWindow . center")
 
 # create first frame
-frame1 = tk.Frame(root, width=600, height=600, bg="#ffffff")
+frame1 = tk.Frame(root, width=506, height=600, bg="#ffffff")
 
 # place frame on the page
 frame1.grid(row=0, column=0)
