@@ -4,6 +4,12 @@ from PIL import ImageTk
 
 BG_COLOUR = "#ffffff"
 
+
+# function to load frame2
+def load_frame2():
+    print("Wheel is spinning!")
+
+
 # initiallize app
 root = tk.Tk()
 
@@ -54,7 +60,7 @@ tk.Button(
     cursor="hand2",
     activebackground="#123456",
     activeforeground="red",
-    command=""
+    command=lambda:load_frame2()
 ).pack()
     
     
