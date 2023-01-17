@@ -16,6 +16,10 @@ frame1 = tk.Frame(root, width=400, height=400, bg="#ffffff")
 # place frame on the page
 frame1.grid(row=0, column=0)
 
+# prevent child form modifying parent
+frame1.pack_propagate(False)
+
+
 # load image for main screen
 main_screen_img = ImageTk.PhotoImage(file="assets/main_screen.png")
 
