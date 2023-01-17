@@ -20,7 +20,7 @@ root.title("Twister App")
 root.eval("tk::PlaceWindow . center")
 
 # create first frame
-frame1 = tk.Frame(root, width=506, height=600, bg=BG_COLOUR)
+frame1 = tk.Frame(root, width=506, height=630, bg=BG_COLOUR)
 
 # place frame on the page
 frame1.grid(row=0, column=0)
@@ -61,7 +61,7 @@ tk.Button(
     activebackground="#123456",
     activeforeground="red",
     command=lambda:load_frame2()
-).pack()
+).pack(pady=20)
     
     
 
