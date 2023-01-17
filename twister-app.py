@@ -1,5 +1,7 @@
 import tkinter as tk
 from PIL import ImageTk
+import random
+from random import randrange
 
 
 BG_COLOUR = "#ffffff"
@@ -46,7 +48,29 @@ def load_frame1():
 
 # function to load frame2
 def load_frame2():
-    print("Wheel is spinning!")
+    print(get_random_position())
+    
+    
+def get_random_position():
+    positions = {
+        1 : "right hand green",
+        2 : "right hand red",
+        3 : "right hand yellow",
+        4 : "right hand blue",
+        5 : "right foot green",
+        6 : "right foot red",
+        7 : "right foot yellow",
+        8 : "right foot blue",
+        9 : "left hand green",
+        10 : "left hand red",
+        11 : "left hand yellow",
+        12 : "left hand blue",
+        13 : "left foot green",
+        14 : "left foot red",
+        15 : "left foot yellow",
+        16 : "left hand blue",
+    }
+    return positions[randrange(1, len(positions), 1)]
 
 
 # initiallize app
@@ -61,11 +85,20 @@ root.eval("tk::PlaceWindow . center")
 # create first frame
 frame1 = tk.Frame(root, width=506, height=630, bg=BG_COLOUR)
 
-# place frame on the page
-frame1.grid(row=0, column=0)
+# create second frame
+frame2 = tk.Frame(root, bg=BG_COLOUR)
+
+# place first frame on the page
+#frame1.grid(row=0, column=0)
+
+# place second frame on the page
+#frame2.grid(row=0, column=0)
+
+for frame in (frame1, frame2):
+    frame.grid(row=0, column=0)
 
 
-
+load_frame1()
 
     
     
