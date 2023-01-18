@@ -80,6 +80,19 @@ def load_frame2():
         font=("TkHeadingFont", 24)
     ).pack()
     
+    # create button widget
+    tk.Button(
+        frame2,
+        text="SPIN THE WHEEL",
+        font=("TkDefaultFont", 24),
+        bg="#888888",
+        fg="white",
+        cursor="hand2",
+        activebackground="#123456",
+        activeforeground="red",
+        command=lambda:load_frame2()
+    ).pack(pady=20)
+    
     
 def get_random_position():
     positions = {
