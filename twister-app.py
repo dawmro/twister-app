@@ -69,7 +69,7 @@ def load_frame2():
     
     # raise frame2 on top
     frame2.tkraise()
-    #print(get_random_position())
+    
     # load image for current screen
     random_img = ImageTk.PhotoImage(file=random.choice(RESULTS_FILES))
 
@@ -100,31 +100,7 @@ def load_frame2():
         activebackground="#123456",
         activeforeground="red",
         command=lambda:load_frame2()
-    ).pack(pady=20)
-    
-    
-def get_random_position():
-    positions = {
-        1 : "right hand green",
-        2 : "right hand red",
-        3 : "right hand yellow",
-        4 : "right hand blue",
-        5 : "right foot green",
-        6 : "right foot red",
-        7 : "right foot yellow",
-        8 : "right foot blue",
-        9 : "left hand green",
-        10 : "left hand red",
-        11 : "left hand yellow",
-        12 : "left hand blue",
-        13 : "left foot green",
-        14 : "left foot red",
-        15 : "left foot yellow",
-        16 : "left hand blue",
-    }
-    return positions[randrange(1, len(positions), 1)]
-
-
+    ).pack(pady=20)   
 
 
 # initiallize app
@@ -142,21 +118,12 @@ frame1 = tk.Frame(root, width=506, height=630, bg=BG_COLOUR)
 # create second frame
 frame2 = tk.Frame(root, bg=BG_COLOUR)
 
-# place first frame on the page
-#frame1.grid(row=0, column=0)
-
-# place second frame on the page
-#frame2.grid(row=0, column=0)
-
+# place frames on grid
 for frame in (frame1, frame2):
     frame.grid(row=0, column=0)
 
-
+# load first frame
 load_frame1()
-
     
-    
-
-
 # run app
 root.mainloop()
