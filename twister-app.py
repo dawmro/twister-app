@@ -60,7 +60,16 @@ def load_frame1():
 def load_frame2():
     # raise frame2 on top
     frame2.tkraise()
-    print(get_random_position())
+    #print(get_random_position())
+    # load image for current screen
+    random_img = ImageTk.PhotoImage(file=random.choice(RESULTS_FILES))
+
+    # convert image to widget for frame2
+    random_img_widget = tk.Label(frame2, image=random_img, bg=BG_COLOUR)
+    random_img_widget.image = random_img
+
+    # pack widget to place it in frame
+    random_img_widget.pack(pady=20)
     
     
 def get_random_position():
