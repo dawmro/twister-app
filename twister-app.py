@@ -19,6 +19,7 @@ def clear_widgets(frame):
     for widget in frame.winfo_children():
         widget.destroy()
 
+
 # function to load frame1
 def load_frame1():
     
@@ -103,27 +104,28 @@ def load_frame2():
     ).pack(pady=20)   
 
 
-# initiallize app
-root = tk.Tk()
+if __name__ == "__main__":
+    # initiallize app
+    root = tk.Tk()
 
-# add app title
-root.title("Twister App")
+    # add app title
+    root.title("Twister App")
 
-# center app on the screen
-root.eval("tk::PlaceWindow . center")
+    # center app on the screen
+    root.eval("tk::PlaceWindow . center")
 
-# create first frame
-frame1 = tk.Frame(root, width=506, height=630, bg=BG_COLOUR)
+    # create first frame
+    frame1 = tk.Frame(root, width=506, height=630, bg=BG_COLOUR)
 
-# create second frame
-frame2 = tk.Frame(root, bg=BG_COLOUR)
+    # create second frame
+    frame2 = tk.Frame(root, bg=BG_COLOUR)
 
-# place frames on grid
-for frame in (frame1, frame2):
-    frame.grid(row=0, column=0)
+    # place frames on grid
+    for frame in (frame1, frame2):
+        frame.grid(row=0, column=0)
 
-# load first frame
-load_frame1()
-    
-# run app
-root.mainloop()
+    # load first frame
+    load_frame1()
+        
+    # run app
+    root.mainloop()
