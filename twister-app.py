@@ -14,9 +14,14 @@ RESULTS_IMAGES_DIR = 'assets/spin_results'
 RESULTS_FILES = [item for item in pathlib.Path(RESULTS_IMAGES_DIR).rglob('*.png') if item.is_file()]
 
 
+# remove all widgets form screen
+def clear_widgets(frame):
+    for widget in frame.winfo_children():
+        widget.destroy()
 
 # function to load frame1
 def load_frame1():
+    
     # raise frame1 on top
     frame1.tkraise()
     
@@ -58,6 +63,9 @@ def load_frame1():
 
 # function to load frame2
 def load_frame2():
+    # clear app screen
+    clear_widgets(frame2)
+    
     # raise frame2 on top
     frame2.tkraise()
     #print(get_random_position())
