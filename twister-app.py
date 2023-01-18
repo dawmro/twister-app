@@ -64,6 +64,7 @@ def load_frame1():
 # function to load frame2
 def load_frame2():
     # clear app screen
+    clear_widgets(frame1)
     clear_widgets(frame2)
     
     # raise frame2 on top
@@ -77,7 +78,7 @@ def load_frame2():
     random_img_widget.image = random_img
 
     # pack widget to place it in frame
-    random_img_widget.pack(pady=20)
+    random_img_widget.pack()
     
     # create widget with text for frame1
     tk.Label(
