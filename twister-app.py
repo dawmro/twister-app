@@ -71,6 +71,15 @@ def load_frame2():
     # pack widget to place it in frame
     random_img_widget.pack(pady=20)
     
+    # create widget with text for frame1
+    tk.Label(
+        frame2,
+        text="take it for a spin",
+        bg=BG_COLOUR,
+        fg="black",
+        font=("TkHeadingFont", 24)
+    ).pack()
+    
     
 def get_random_position():
     positions = {
